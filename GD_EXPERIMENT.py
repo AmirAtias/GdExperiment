@@ -29,8 +29,8 @@ def IFF_GD_deep_learninig(num_of_exper, learnRate, nb_hidden, shortCut):
  optimizer = tf.train.GradientDescentOptimizer(learnRate) #Grad Descent Optimizer
  train = optimizer.minimize(loss)  # training is running optimizer to minimize loss
 
- x_train = [[0, 0], [0, 1], [1, 0], [1, 1]]
- t_train = [[1], [0], [0], [1]]
+ x_train = [[0, 0], [0, 1], [1, 0], [1, 1]] # if and only if
+ t_train = [[1], [0], [0], [1]] # expected results
  x_valid = [[0, 0], [0, 1], [1, 0], [1, 1], [0.1, 0.1], [0.1, 0.9], [0.9, 0.1], [0.9, 0.9]];
  t_valid = [[1], [0], [0], [1], [1], [0], [0], [1]]
  init = tf.global_variables_initializer()
